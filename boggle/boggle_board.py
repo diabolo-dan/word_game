@@ -1,7 +1,6 @@
 from . import random_letter
 
 GRID_DIMENSIONS = 5
-VIRTUAL_DIMENSION = GRID_DIMENSION + 1
 
 def get_directions():
 	base_directions = range(-1,2)
@@ -15,7 +14,7 @@ DIRECTIONS = get_directions()
 
 class BoggleBoard(object):
 	def __init__(self, letters=None):
-		self._letters = letters or self.random_letters()
+		self._letters = letters or self._random_letters()
 
 	@staticmethod
 	def _random_letters():
@@ -26,5 +25,4 @@ class BoggleBoard(object):
 		]
 
 	def __str__(self):
-		for row in self._letters:
-			print '|'.join(row)
+		return '\n'.join('|'.join(row) for row in self._letters)
