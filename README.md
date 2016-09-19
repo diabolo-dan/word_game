@@ -1,2 +1,2 @@
 # word_game
-boggle-esqu word game.
+boggle-esque word game.
