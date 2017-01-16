@@ -1,6 +1,6 @@
 from . import random_letter
 
-GRID_DIMENSIONS = 5
+GRID_DIMENSIONS = 4
 
 def get_directions():
 	base_directions = range(-1,2)
